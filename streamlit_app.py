@@ -41,21 +41,22 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 # streamlit.dataframe(fruits_to_show)
 
 # Let´s put a pick list here so they can pick the fruit they want to include --- Change values of the picker
-fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Banana','Grapes'])
-fruits_to_show = my_fruit_list.loc[fruits_selected]
+# fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Banana','Grapes'])
+# fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page
-streamlit.dataframe(fruits_to_show)
+# streamlit.dataframe(fruits_to_show)
 
 # Al cambiar valores de Avocado y Strawberries por Banana y Grapes muestra este error
 # File "/app/first_streamlit_app/streamlit_app.py", line 41
 # streamlit.dataframe(fruits_to_show)
 # ^
 # IndentationError: unexpected indent
+# No había comentado líneas de arriba para mostrar el dataframe, corre ok, se filtra la tabla con datos de Banana y Grapes
 
-# Let´s put a pick list here so they can pick the fruit they want to include --- Change values of the picker
-# fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Banana','Grapes'])
-# fruits_to_show = my_fruit_list.loc[fruits_selected]
+# Let´s put a pick list here so they can pick the fruit they want to include --- Delete values of the picker
+fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page
-# streamlit.dataframe(fruits_to_show)
+streamlit.dataframe(fruits_to_show)
