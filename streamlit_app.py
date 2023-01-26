@@ -60,3 +60,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page
 streamlit.dataframe(fruits_to_show)
+
+# La tabla se muestra vacia por default y despues de elegir algunas frutas la tabla muestra los datos de las frutas seleccionadas :-O
+# End of Lesson 3 DABW Snowflake
